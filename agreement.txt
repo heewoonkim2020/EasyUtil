@@ -1,0 +1,9 @@
+==== AGREEMENT ====
+This Python software is not licensed under any possible license and any copy of the software will not be punished.
+By installing this software you are supporting the developers. You are promising not to share any personal inform
+ation to other people through the clients, including informal and disrespective content.
+
+By setting the above to true, you agree to the above info.
+agree=true
+
+# END OF FILE
