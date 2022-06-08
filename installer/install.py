@@ -14,9 +14,9 @@ if os.path.exists("agreement.txt"):
             if line.startswith("agree="):
                 agree_var = line.split("=")[1]
                 if agree_var == "true" or "yes":
-                    print("[INFO] Thanks for agreeing to the agreement. Do not delete the agreement file.")
-                    os.remove("agreement.txt")
-                    print("[INFO] [File Operation] Deleted 1 file(s)")
+                    print("[INFO] Thanks for agreeing to the agreement. You may delete the")
+                    print("[INFO] agreement file now.")
+                    print("[INFO] [File Operation] Failed to delete 1 file(s)")
                     print("[INFO] [Installation] Starting installer...")
                     from . import downloader
                 else:
