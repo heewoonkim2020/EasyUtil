@@ -1,0 +1,17 @@
+Thanks for launching the EasyUtil GUI installer.
+This installer is meant to be easy to use, more easier than the command-line CLI installer.
+
+1) Do not distribute this software without this license text.
+
+2) Do not distribute this software in cracked distributing companies.
+
+3) Do not advertise user information.
+
+4) Do not attempt to crack the installer.
+
+5) Do not attempt to hack the CDN, which is Github for EasyUtil.
+
+6) Do not attempt to apply hacks on EUtil.
+
+Thanks for reading these terms.
+Happy EUTIL USING!!
