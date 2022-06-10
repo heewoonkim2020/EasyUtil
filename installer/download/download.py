@@ -33,14 +33,14 @@ def download(
 
     This will download a file and store it in a '~/data/` folder,
     creating directories if need be. It will also work for zip
-    files, in which case it will unzip all of the files to the
+    files, in which case it will unzip all the files to the
     desired location.
 
     Parameters
     ----------
     url : string
         The url of the file to download. This may be a dropbox
-        or google drive "share link", or a regular URL. If it
+        or Google Drive "share link", or a regular URL. If it
         is a share link, then it should point to a single file and
         not a folder. To download folders, zip them first.
     path : string
@@ -130,10 +130,10 @@ def download(
 
 
 def _convert_url_to_downloadable(url):
-    """Convert a url to the proper style depending on its website."""
+    """Convert an url to the proper style depending on its website."""
 
     if "drive.google.com" in url:
-        # For future support of google drive
+        # For future support of Google Drive
         file_id = url.split("d/")[1].split("/")[0]
         base_url = "https://drive.google.com/uc?export=download&id="
         out = "{}{}".format(base_url, file_id)

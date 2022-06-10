@@ -1,17 +1,23 @@
-Thanks for launching the EasyUtil GUI installer.
-This installer is meant to be easy to use, more easier than the command-line CLI installer.
+(c) Copyright 2022 EasyUtil, Inc.
+---------------------------------------
+This GUI-based installer is recommended for most people since it does not use a CLI (command line interface).
+This installer is much easier to use.
 
-1) Do not distribute this software without this license text.
+1. Do not distribute this software without this license text.
+Distributing this software is permitted, however ONLY if you include this text.
+Distributing without this text is illegal.
 
-2) Do not distribute this software in cracked distributing companies.
+2. Do not distribute this software in cracked distributing companies.
+Do not send this software to hacking / cracking companies.
 
-3) Do not advertise user information.
+3. Do not advertise user information.
+Advertising user information will lure users to unregister, do not do this.
 
-4) Do not attempt to crack the installer.
+4. Do not attempt to crack the installer.
+Cracking and distributing the installer is illegal.
 
-5) Do not attempt to hack the CDN, which is Github for EasyUtil.
+5. Do not attempt to hack the CDN, which is GitHub for EasyUtil.
+We use GitHub for the online GUI installer.
 
-6) Do not attempt to apply hacks on EUtil.
-
-Thanks for reading these terms.
-Happy EUTIL USING!!
+6. Do not attempt to apply hacks on EUtil.
+Hacking on EUtil is 100% illegal and will immediately receive an ip ban and an ip leak for revenge.
