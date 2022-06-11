@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd417b41-0ba6-444f-af60-01afc7343c32" name="Changes" comment="Create GUI Installer version v1">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="cd417b41-0ba6-444f-af60-01afc7343c32" name="Changes" comment="Beta installer 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eutil/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/eutil/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eutil/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/eutil/exceptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eutil/pyplugin.py" beforeDir="false" afterPath="$PROJECT_DIR$/eutil/pyplugin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui_installer/EasyUtil.nsi" beforeDir="false" afterPath="$PROJECT_DIR$/gui_installer/EasyUtil.nsi" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui_installer/EasyUtil_v1_Setup.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui_installer/license.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gui_installer/license.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/installer/download/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/installer/download/download.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +19,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -153,7 +152,63 @@
       <option name="project" value="LOCAL" />
       <updated>1654777990897</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Feature renewal">
+      <created>1654850005513</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1654850005514</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Feature renewal">
+      <created>1654850024244</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1654850024244</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Edit gui installer license">
+      <created>1654925267124</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1654925267124</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Safesearch plugin">
+      <created>1654925285534</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1654925285534</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add suride plugin">
+      <created>1654925483592</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1654925483592</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Beta installer">
+      <created>1654926812699</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1654926812699</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Beta installer">
+      <created>1654926830429</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1654926830429</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Beta installer 2">
+      <created>1654927026986</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1654927026986</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,7 +216,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -176,6 +243,12 @@
     <MESSAGE value="Delete main" />
     <MESSAGE value="Edit Gitignore" />
     <MESSAGE value="Create GUI Installer version v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create GUI Installer version v1" />
+    <MESSAGE value="Feature renewal" />
+    <MESSAGE value="Edit gui installer license" />
+    <MESSAGE value="Safesearch plugin" />
+    <MESSAGE value="Add suride plugin" />
+    <MESSAGE value="Beta installer" />
+    <MESSAGE value="Beta installer 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beta installer 2" />
   </component>
 </project>

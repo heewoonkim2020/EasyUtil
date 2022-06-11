@@ -16,7 +16,7 @@
   Unicode True
 
   ;Default installation folder
-  InstallDir "$LOCALAPPDATA\EasyUtil"
+  InstallDir "C:\Program Files\EasyUtil\"
 
   ;Get installation folder from registry if available
   InstallDirRegKey HKCU "Software\EasyUtil" ""
@@ -52,7 +52,7 @@
 ;--------------------------------
 ;Installer Sections
 
-Section "Core Files" SecDummy
+Section "Core Files" SecCore
 
   SetOutPath "$INSTDIR"
 
@@ -70,6 +70,9 @@ Section "Core Files" SecDummy
   ;  MessageBox mb_iconstop "Error: $0" ;Show cancel/error message
   ;${EndIf}
   inetc::get "https://github.com/heewoonkim2020/EasyUtil/raw/main/installer_archives/archive1.zip" "$INSTDIR\eutil.zip"
+  WriteUninstaller $INSTDIR\uninstaller.exe
+  createDirectory "$SMPROGRAMS\EasyUtil"
+  createShortCut "$SMPROGRAMS\EasyUtil\EUtil Uninstall.lnk" "$INSTDIR\uninstaller.exe"
 
 SectionEnd
 
@@ -77,17 +80,20 @@ SectionEnd
 ;Descriptions
 
   ;Language strings
-  LangString DESC_SecDummy ${LANG_ENGLISH} "The core files of EasyUtil. Installation won't take effect if unchecked."
+  LangString DESC_SecCore ${LANG_ENGLISH} "The core files of EasyUtil. Installation won't take effect if unchecked."
 
   ;Assign language strings to sections
   !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
-    !insertmacro MUI_DESCRIPTION_TEXT ${SecDummy} $(DESC_SecDummy)
+    !insertmacro MUI_DESCRIPTION_TEXT ${SecCore} $(DESC_SecCore)
   !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 ;--------------------------------
 ;Uninstaller section
 
 Section "Uninstall"
+
+  delete "$SMPROGRAMS\EasyUtil\EUtil Uninstall.lnk"
+  RMDir "$SMPROGRAMS/EasyUtil"
 
   Delete "$INSTDIR\*"
   RMDir "$INSTDIR\*"
