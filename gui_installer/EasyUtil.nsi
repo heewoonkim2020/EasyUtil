@@ -52,7 +52,7 @@
 ;--------------------------------
 ;Installer Sections
 
-Section "Core Files" SecDummy
+Section "Core Files" SecCore
 
   SetOutPath "$INSTDIR"
 
@@ -77,11 +77,11 @@ SectionEnd
 ;Descriptions
 
   ;Language strings
-  LangString DESC_SecDummy ${LANG_ENGLISH} "The core files of EasyUtil. Installation won't take effect if unchecked."
+  LangString DESC_SecCore ${LANG_ENGLISH} "The core files of EasyUtil. Installation won't take effect if unchecked."
 
   ;Assign language strings to sections
   !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
-    !insertmacro MUI_DESCRIPTION_TEXT ${SecDummy} $(DESC_SecDummy)
+    !insertmacro MUI_DESCRIPTION_TEXT ${SecCore} $(DESC_SecCore)
   !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 ;--------------------------------
