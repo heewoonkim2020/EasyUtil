@@ -21,3 +21,6 @@ We use GitHub for the online GUI installer.
 
 6. Do not attempt to apply hacks on EUtil.
 Hacking on EUtil is 100% illegal and will immediately receive an ip ban and an ip leak for revenge.
+
+7. EasyUtil is free software; do not pay or ask money for using EUtil to someone else.
+You might get scammed using this way.
