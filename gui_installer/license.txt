@@ -28,3 +28,7 @@ You might get scammed using this way.
 8. This is beta software. If you find any bugs, please let us know.
 You can report bugs on this version. That will help us develop better software.
 Please leave reviews!
+
+9. We do not sell your personal information.
+
+10. This is free software; donating is not permitted.
