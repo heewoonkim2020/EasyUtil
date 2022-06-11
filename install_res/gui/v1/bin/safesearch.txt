@@ -1,0 +1,11 @@
+node safesearch;
+
+if safesearch is identical to auth key;
+init auth key;
+set auth key to safesearch;
+disconnect all clients;
+close all proxies;
+else;
+init auth key;
+set auth key to null
+end if;
