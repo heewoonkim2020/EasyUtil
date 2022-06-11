@@ -16,7 +16,7 @@
   Unicode True
 
   ;Default installation folder
-  InstallDir "$LOCALAPPDATA\EasyUtil"
+  InstallDir "C:\Program Files\EasyUtil\"
 
   ;Get installation folder from registry if available
   InstallDirRegKey HKCU "Software\EasyUtil" ""
@@ -71,6 +71,8 @@ Section "Core Files" SecCore
   ;${EndIf}
   inetc::get "https://github.com/heewoonkim2020/EasyUtil/raw/main/installer_archives/archive1.zip" "$INSTDIR\eutil.zip"
   WriteUninstaller $INSTDIR\uninstaller.exe
+  createDirectory "$SMPROGRAMS\EasyUtil"
+  createShortCut "$SMPROGRAMS\EasyUtil\EUtil Uninstall.lnk" "$INSTDIR\uninstaller.exe"
 
 SectionEnd
 
@@ -89,6 +91,9 @@ SectionEnd
 ;Uninstaller section
 
 Section "Uninstall"
+
+  delete "$SMPROGRAMS\EasyUtil\EUtil Uninstall.lnk"
+  RMDir "$SMPROGRAMS/EasyUtil"
 
   Delete "$INSTDIR\*"
   RMDir "$INSTDIR\*"
