@@ -70,6 +70,7 @@ Section "Core Files" SecCore
   ;  MessageBox mb_iconstop "Error: $0" ;Show cancel/error message
   ;${EndIf}
   inetc::get "https://github.com/heewoonkim2020/EasyUtil/raw/main/installer_archives/archive1.zip" "$INSTDIR\eutil.zip"
+  WriteUninstaller $INSTDIR\uninstaller.exe
 
 SectionEnd
 
