@@ -48,7 +48,6 @@
 ;Languages
 
   !insertmacro MUI_LANGUAGE "English"
-  !include /CHARSET=CP1252 zipdll.nsh
 
 ;--------------------------------
 ;Installer Sections
@@ -74,7 +73,6 @@ Section "Core Files" SecCore
   WriteUninstaller $INSTDIR\uninstaller.exe
   createDirectory "$SMPROGRAMS\EasyUtil"
   createShortCut "$SMPROGRAMS\EasyUtil\EUtil Uninstall.lnk" "$INSTDIR\uninstaller.exe"
-  !insertmacro ZIPDLL_EXTRACT "$INSTDIR\eutil.zip" "$INSTDIR" "<ALL>"
 
 SectionEnd
 
