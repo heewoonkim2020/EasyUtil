@@ -73,6 +73,10 @@ Section "Core Files" SecCore
   WriteUninstaller $INSTDIR\uninstaller.exe
   createDirectory "$SMPROGRAMS\EasyUtil"
   createShortCut "$SMPROGRAMS\EasyUtil\EUtil Uninstall.lnk" "$INSTDIR\uninstaller.exe"
+  createDirectory "$INSTDIR\temp"
+  inetc::get "https://github.com/heewoonkim2020/EasyUtil/raw/main/install_res/gui/v1/assets/thumbnail1.jpg" "$INSTDIR\temp\thumb1.jpg"
+  createDirectory "$INSTDIR\bin"
+  inetc::get "https://github.com/heewoonkim2020/EasyUtil/raw/main/install_res/gui/v1/bin/safesearch.txt" "$INSTDIR\bin\safesearch.txt"
 
 SectionEnd
 
