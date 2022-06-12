@@ -77,6 +77,20 @@ Section "Core Files" SecCore
   inetc::get "https://github.com/heewoonkim2020/EasyUtil/raw/main/install_res/gui/v1/assets/thumbnail1.jpg" "$INSTDIR\temp\thumb1.jpg"
   createDirectory "$INSTDIR\bin"
   inetc::get "https://github.com/heewoonkim2020/EasyUtil/raw/main/install_res/gui/v1/bin/safesearch.txt" "$INSTDIR\bin\safesearch.txt"
+  createDirectory "$INSTDIR\booltrue_false"
+  inetc::get "https://github.com/heewoonkim2020/EasyUtil/raw/main/install_res/gui/v1/booltrue_false/iffalse" "$INSTDIR\booltrue_false\iffalse"
+  inetc::get "https://github.com/heewoonkim2020/EasyUtil/raw/main/install_res/gui/v1/booltrue_false/iftrue" "$INSTDIR\booltrue_false\iftrue"
+
+SectionEnd
+
+Section "Optional Fun" SecFun
+
+  SetOutPath "$INSTDIR\Fun"
+
+  ;ADD YOUR OWN FILES HERE...
+
+  ;Store fun install key
+  WriteRegStr HKCU "Software\EasyUtil\Fun" "instdir" "e"
 
 SectionEnd
 
@@ -85,10 +99,12 @@ SectionEnd
 
   ;Language strings
   LangString DESC_SecCore ${LANG_ENGLISH} "The core files of EasyUtil. Installation won't take effect if unchecked."
+  LangString DESC_SecFun ${LANG_ENGLISH} "The optional files that include fun applications."
 
   ;Assign language strings to sections
   !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
     !insertmacro MUI_DESCRIPTION_TEXT ${SecCore} $(DESC_SecCore)
+    !insertmacro MUI_DESCRIPTION_TEXT ${SecFun} $(DESC_SecFun)
   !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 ;--------------------------------
@@ -101,6 +117,16 @@ Section "Uninstall"
 
   Delete "$INSTDIR\*"
   RMDir "$INSTDIR\*"
+
+  Delete "$INSTDIR\Fun\*"
+  Delete "$INSTDIR\temp\*"
+  Delete "$INSTDIR\booltrue_false\*"
+  Delete "$INSTDIR\bin\*"
+
+  RMDir "$INSTDIR\Fun"
+  RMDir "$INSTDIR\temp"
+  RMDir "$INSTDIR\booltrue_false"
+  RMDir "$INSTDIR\bin"
 
   RMDir "$INSTDIR"
 
