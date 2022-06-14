@@ -130,6 +130,8 @@ Section "Uninstall"
 
   RMDir "$INSTDIR"
 
+  DeleteRegKey /ifempty HKCU "Software\EasyUtil\Fun\instdir"
+  DeleteRegKey /ifempty HKCU "Software\EasyUtil\Fun"
   DeleteRegKey /ifempty HKCU "Software\EasyUtil"
 
 SectionEnd
