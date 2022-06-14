@@ -1,9 +1,10 @@
-;NSIS Modern User Interface
-;Welcome/Finish Page Example Script
-;Written by Joost Verburg
+;EasyUtil 2022
+;(c) EasyUtil Corporation 2022
+
+;DEVFRIENDS LICENSE >_<
 
 ;--------------------------------
-;Include Modern UI
+;Include ModernUI pkg
 
   !include "MUI2.nsh"
 

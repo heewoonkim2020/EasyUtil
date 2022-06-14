@@ -1,5 +1,9 @@
 (c) Copyright 2022 EasyUtil, Inc.
+
+DEVFRIENDS LICENSE >_<
 ---------------------------------------
+- BASIC FAQ
+
 This GUI-based installer is recommended for most people since it does not use a CLI (command line interface).
 This installer is much easier to use.
 
@@ -26,5 +30,40 @@ Hacking on EUtil is 100% illegal and will immediately receive an ip ban and an i
 You might get scammed using this way.
 
 8. We do not sell your personal information.
+We do not sell your info to advertising companies.
 
 9. This is free software; donating is not permitted.
+We do not allow donating, if you are asked to pay money for access, use your brain.
+You're totally being scammed.
+
+---------------------------------------
+- END USER LICENSE AGREEMENT
+
+EasyUtil has terms you are required to follow in order to use the service.
+
+1. DEVFRIENDS LICENSE >_<
+License version: DevFriends License V3
+
+DEVFRIENDS LICENSE V3
+
+Copyright (c) 2022 heewoonkim2020
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---------------------------------------
