@@ -8,7 +8,7 @@ class mainpage(Tk):
         self.title("EasyUtil")
 
     def Label(self):
-        self.backGroundImage = PhotoImage(file="background_img.jfif")
+        self.backGroundImage = PhotoImage(file="background_img.png")
         self.backGroundImageLabel = Label(self, image=self.backGroundImage)
         self.backGroundImageLabel.place(x=0, y=0)
 
