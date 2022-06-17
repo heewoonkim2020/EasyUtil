@@ -1,0 +1,6 @@
+name: pproxy
+version: 3.2
+compilever:
+  plugincmds:
+    cmd1: "/exit - Close the proxy"
+    cmd2: "/end - Close the proxy"
