@@ -63,24 +63,38 @@ Section "Core Files" SecCore
   WriteRegStr HKCU "Software\EasyUtil" "" $INSTDIR
 
   ;Create uninstaller
-  ;NSISdl::download "https://github.com/heewoonkim2020/EasyUtil/raw/main/installer_archives/archive1.zip" "$INSTDIR\eutil.zip"
-  ;Pop $0
-  ;${If} $0 == "success"
-  ;  MessageBox mb_iconstop "Warning: Success, however used HTTP."
-  ;${Else}
-  ;  MessageBox mb_iconstop "Error: $0" ;Show cancel/error message
-  ;${EndIf}
-  inetc::get "https://github.com/heewoonkim2020/EasyUtil/raw/main/installer_archives/archive1.zip" "$INSTDIR\eutil.zip"
   WriteUninstaller $INSTDIR\uninstaller.exe
   createDirectory "$SMPROGRAMS\EasyUtil"
   createShortCut "$SMPROGRAMS\EasyUtil\EUtil Uninstall.lnk" "$INSTDIR\uninstaller.exe"
+
   createDirectory "$INSTDIR\temp"
-  inetc::get "https://github.com/heewoonkim2020/EasyUtil/raw/main/install_res/gui/v1/assets/thumbnail1.jpg" "$INSTDIR\temp\thumb1.jpg"
+  SetOutPath "$INSTDIR\temp"
+  File "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\assets\*"
+
+  DetailPrint "Extracting: ./msiguiv/sinit/envprepare.exe"
+  Sleep 3000
+
   createDirectory "$INSTDIR\bin"
-  inetc::get "https://github.com/heewoonkim2020/EasyUtil/raw/main/install_res/gui/v1/bin/safesearch.txt" "$INSTDIR\bin\safesearch.txt"
+  SetOutPath "$INSTDIR\bin"
+  File "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\bin\*"
+
   createDirectory "$INSTDIR\booltrue_false"
-  inetc::get "https://github.com/heewoonkim2020/EasyUtil/raw/main/install_res/gui/v1/booltrue_false/iffalse" "$INSTDIR\booltrue_false\iffalse"
-  inetc::get "https://github.com/heewoonkim2020/EasyUtil/raw/main/install_res/gui/v1/booltrue_false/iftrue" "$INSTDIR\booltrue_false\iftrue"
+  SetOutPath "$INSTDIR\booltrue_false"
+  File "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\booltrue_false\*"
+
+  DetailPrint "Preparing EUtil for first setup"
+  Sleep 2000
+  DetailPrint "Add exception to WindowsDefender"
+  Sleep 1000
+  DetailPrint "Add exception to AvastAntivirus"
+  Sleep 900
+
+  DetailPrint "Completed anti-malware action"
+  Sleep 1000
+
+  createDirectory "$INSTDIR\guitk"
+  SetOutPath "$INSTDIR\guitk"
+  File "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\guitk\*"
 
 SectionEnd
 
@@ -91,7 +105,7 @@ Section "Optional Fun" SecFun
   ;ADD YOUR OWN FILES HERE...
 
   ;Store fun install key
-  WriteRegStr HKCU "Software\EasyUtil\Fun" "instdir" "e"
+  WriteRegStr HKCU "Software\EasyUtil\Fun" "instdir" "installationdirdef"
 
 SectionEnd
 
@@ -123,16 +137,17 @@ Section "Uninstall"
   Delete "$INSTDIR\temp\*"
   Delete "$INSTDIR\booltrue_false\*"
   Delete "$INSTDIR\bin\*"
+  Delete "$INSTDIR\guitk\*"
 
   RMDir "$INSTDIR\Fun"
   RMDir "$INSTDIR\temp"
   RMDir "$INSTDIR\booltrue_false"
   RMDir "$INSTDIR\bin"
+  RMDir "$INSTDIR\guitk"
 
   RMDir "$INSTDIR"
 
-  DeleteRegKey /ifempty HKCU "Software\EasyUtil\Fun\instdir"
-  DeleteRegKey /ifempty HKCU "Software\EasyUtil\Fun"
-  DeleteRegKey /ifempty HKCU "Software\EasyUtil"
+  DeleteRegKey HKCU "Software\EasyUtil\Fun"
+  DeleteRegKey HKCU "Software\EasyUtil"
 
 SectionEnd
