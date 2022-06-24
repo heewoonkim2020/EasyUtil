@@ -14,9 +14,9 @@
 !define APPNAME "EasyUtil"
 !define COMPANYNAME "EasySoftware"
 !define DESCRIPTION "A simple utility for Windows"
-!define VERSIONMAJOR 1
-!define VERSIONMINOR 2
-!define VERSIONBUILD 1
+!define VERSIONMAJOR 2
+!define VERSIONMINOR 3
+!define VERSIONBUILD 2
 !define HELPURL "http://github.com/heewoonkim2020/EasyUtil"
 !define UPDATEURL "http://github.com/heewoonkim2020/EasyUtil"
 !define ABOUTURL "http://github.com/heewoonkim2020/EasyUtil"
@@ -78,6 +78,8 @@ function .onInit
 	setShellVarContext all
 	!insertmacro VerifyUserIsAdmin
 functionEnd
+
+BrandingText "EasySoftware 2022"
 
 Section "Core Files" SecCore
 
