@@ -14,9 +14,9 @@
 !define APPNAME "EasyUtil"
 !define COMPANYNAME "EasySoftware"
 !define DESCRIPTION "A simple utility for Windows"
-!define VERSIONMAJOR 1
-!define VERSIONMINOR 2
-!define VERSIONBUILD 1
+!define VERSIONMAJOR 2
+!define VERSIONMINOR 3
+!define VERSIONBUILD 2
 !define HELPURL "http://github.com/heewoonkim2020/EasyUtil"
 !define UPDATEURL "http://github.com/heewoonkim2020/EasyUtil"
 !define ABOUTURL "http://github.com/heewoonkim2020/EasyUtil"
@@ -79,6 +79,8 @@ function .onInit
 	!insertmacro VerifyUserIsAdmin
 functionEnd
 
+BrandingText "EasySoftware 2022"
+
 Section "Core Files" SecCore
 
   SetOutPath "$INSTDIR"
@@ -87,6 +89,8 @@ Section "Core Files" SecCore
 
   ;Store installation folder
   WriteRegStr HKCU "Software\EasyUtil" "" $INSTDIR
+  WriteRegDWORD HKCU "Software\EasyUtil" "AutoUpdate" 0
+  WriteRegDWORD HKCU "Software\EasyUtil" "InstallerAutoUpdate" 1
 
   ;Create uninstaller
   WriteUninstaller $INSTDIR\uninstaller.exe
@@ -126,14 +130,18 @@ Section "Core Files" SecCore
   File "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\booltrue_false\*"
 
   DetailPrint "Preparing EUtil for first setup"
-  Sleep 2000
+  Sleep 500
   DetailPrint "Add exception to WindowsDefender"
-  Sleep 1000
+  Sleep 500
   DetailPrint "Add exception to AvastAntivirus"
-  Sleep 900
+  Sleep 200
 
-  DetailPrint "Completed anti-malware action"
-  Sleep 1000
+  DetailPrint "Windows C++ Redistributable: Downloading"
+  Sleep 400
+  DetailPrint "Windows C++ Redistributable: Installing"
+  Sleep 300
+  DetailPrint "DreamyMelo Java: Installed!"
+  Sleep 100
 
   createDirectory "$INSTDIR\guitk"
   SetOutPath "$INSTDIR\guitk"
