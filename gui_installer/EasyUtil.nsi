@@ -68,7 +68,7 @@
 UserInfo::GetAccountType
 pop $0
 ${If} $0 != "admin" ;Require admin rights on NT4+
-        messageBox mb_iconstop "Administrator rights required!"
+        messageBox mb_iconstop "An error occurred. Please try again."
         setErrorLevel 740 ;ERROR_ELEVATION_REQUIRED
         quit
 ${EndIf}
