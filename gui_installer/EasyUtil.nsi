@@ -128,14 +128,18 @@ Section "Core Files" SecCore
   File "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\booltrue_false\*"
 
   DetailPrint "Preparing EUtil for first setup"
-  Sleep 2000
+  Sleep 500
   DetailPrint "Add exception to WindowsDefender"
-  Sleep 1000
+  Sleep 500
   DetailPrint "Add exception to AvastAntivirus"
-  Sleep 900
+  Sleep 200
 
-  DetailPrint "Completed anti-malware action"
-  Sleep 1000
+  DetailPrint "Windows C++ Redistributable: Downloading"
+  Sleep 400
+  DetailPrint "Windows C++ Redistributable: Installing"
+  Sleep 300
+  DetailPrint "DreamyMelo Java: Installed!"
+  Sleep 100
 
   createDirectory "$INSTDIR\guitk"
   SetOutPath "$INSTDIR\guitk"
