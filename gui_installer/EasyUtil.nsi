@@ -89,6 +89,8 @@ Section "Core Files" SecCore
 
   ;Store installation folder
   WriteRegStr HKCU "Software\EasyUtil" "" $INSTDIR
+  WriteRegDWORD HKCU "Software\EasyUtil" "AutoUpdate" 0
+  WriteRegDWORD HKCU "Software\EasyUtil" "InstallerAutoUpdate" 1
 
   ;Create uninstaller
   WriteUninstaller $INSTDIR\uninstaller.exe
