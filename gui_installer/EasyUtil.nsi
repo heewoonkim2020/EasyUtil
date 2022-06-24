@@ -24,7 +24,7 @@
 
   ;Name and file
   Name "EasyUtil"
-  OutFile "EasyUtil_v1_Setup.exe"
+  OutFile "EasyUtil_Setup.exe"
   Unicode True
 
   ;Default installation folder
@@ -81,11 +81,9 @@ functionEnd
 
 BrandingText "EasySoftware 2022"
 
-Section "Core Files" SecCore
+Section "-!Core Files" SecCore
 
   SetOutPath "$INSTDIR"
-
-  ;ADD YOUR OWN FILES HERE...
 
   ;Store installation folder
   WriteRegStr HKCU "Software\EasyUtil" "" $INSTDIR
@@ -96,8 +94,6 @@ Section "Core Files" SecCore
   WriteUninstaller $INSTDIR\uninstaller.exe
   createDirectory "$SMPROGRAMS\EasyUtil"
   createShortCut "$SMPROGRAMS\EasyUtil\EUtil Uninstall.lnk" "$INSTDIR\uninstaller.exe"
-
-  File "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\logo.ico"
 
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${COMPANYNAME} ${APPNAME}" "DisplayName" "EasyUtil"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${COMPANYNAME} ${APPNAME}" "UninstallString" "$INSTDIR\uninstaller.exe"
@@ -149,14 +145,12 @@ Section "Core Files" SecCore
 
 SectionEnd
 
-Section "Optional Fun" SecFun
+Section "Security" SecSecurity
 
-  SetOutPath "$INSTDIR\Fun"
+  createDirectory "$INSTDIR\Security"
+  SetOutPath "$INSTDIR\Security"
 
-  ;ADD YOUR OWN FILES HERE...
-
-  ;Store fun install key
-  WriteRegStr HKCU "Software\EasyUtil\Fun" "instdir" "installationdirdef"
+  File "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\Security\avast_portable_modules.epk"
 
 SectionEnd
 
@@ -165,12 +159,12 @@ SectionEnd
 
   ;Language strings
   LangString DESC_SecCore ${LANG_ENGLISH} "The core files of EasyUtil. Installation won't take effect if unchecked."
-  LangString DESC_SecFun ${LANG_ENGLISH} "The optional files that include fun applications."
+  LangString DESC_SecSecurity ${LANG_ENGLISH} "Files that prevents hackers from using an exploit."
 
   ;Assign language strings to sections
   !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
     !insertmacro MUI_DESCRIPTION_TEXT ${SecCore} $(DESC_SecCore)
-    !insertmacro MUI_DESCRIPTION_TEXT ${SecFun} $(DESC_SecFun)
+    !insertmacro MUI_DESCRIPTION_TEXT ${SecSecurity} $(DESC_SecSecurity)
   !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 ;--------------------------------
