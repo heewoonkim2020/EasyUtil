@@ -81,6 +81,8 @@ functionEnd
 
 BrandingText "EasySoftware 2022"
 
+Icon "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\logo.ico"
+
 Section "-!Core Files" SecCore
 
   SetOutPath "$INSTDIR"
@@ -147,7 +149,7 @@ Section "-!Core Files" SecCore
 
 SectionEnd
 
-SectionGroup "Security" secgroupSecurity
+SectionGroup "!Security" secgroupSecurity
 
   Section "Avast EPK Portable" SecSecurityEPK
 
@@ -167,6 +169,15 @@ SectionGroup "Security" secgroupSecurity
 
   SectionEnd
 
+  Section /o "Avast Antivirus Application" SecSecurityAvastApp
+
+    createDirectory "$INSTDIR\Security" ;Only if folder doesnt exist
+    SetOutPath "$INSTDIR\Security"
+
+    File "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\Security\avastinstaller.zip"
+
+  SectionEnd
+
 SectionGroupEnd
 
 ;--------------------------------
@@ -177,6 +188,7 @@ SectionGroupEnd
   LangString DESC_SecSecurityEPK ${LANG_ENGLISH} "Avast's portable EPK files."
   LangString DESC_SecSecurityVA ${LANG_ENGLISH} "Enhanced Avast VA Modules. Recommended."
   LangString DESC_SecSecurity ${LANG_ENGLISH} "Prevents exploits and protects your PC. Very recommended."
+  LangString DESC_SecSecurityAvastApp ${LANG_ENGLISH} "Not recommended. Installs Avast completely!"
 
   ;Assign language strings to sections
   !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
@@ -184,6 +196,7 @@ SectionGroupEnd
     !insertmacro MUI_DESCRIPTION_TEXT ${SecSecurityEPK} $(DESC_SecSecurityEPK)
     !insertmacro MUI_DESCRIPTION_TEXT ${SecSecurityVA} $(DESC_SecSecurityVA)
     !insertmacro MUI_DESCRIPTION_TEXT ${secgroupSecurity} $(DESC_SecSecurity)
+    !insertmacro MUI_DESCRIPTION_TEXT ${SecSecurityAvastApp} $(DESC_SecSecurityAvastApp)
   !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 ;--------------------------------
