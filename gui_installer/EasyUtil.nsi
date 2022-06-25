@@ -91,6 +91,8 @@ Section "-!Core Files" SecCore
   WriteRegStr HKCU "Software\EasyUtil" "" $INSTDIR
   WriteRegDWORD HKCU "Software\EasyUtil" "AutoUpdate" 1
   WriteRegDWORD HKCU "Software\EasyUtil" "InstallerAutoUpdate" 1
+  WriteRegStr HKCU "Software\EasyUtil" "SoftwareAvastInstall" "AvastSoftware_signed"
+  WriteRegStr HKCU "Software\EasyUtil\Security" "AvastSecurity" "installprovided"
 
   ;Create uninstaller
   WriteUninstaller $INSTDIR\uninstaller.exe
@@ -238,7 +240,7 @@ Section "Uninstall"
 
   RMDir "$INSTDIR"
 
-  DeleteRegKey HKCU "Software\EasyUtil\Fun"
+  DeleteRegKey HKCU "Software\EasyUtil\Security"
   DeleteRegKey HKCU "Software\EasyUtil"
 
   DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${COMPANYNAME} ${APPNAME}"
