@@ -16,7 +16,7 @@
 !define DESCRIPTION "A simple utility for Windows"
 !define VERSIONMAJOR 2
 !define VERSIONMINOR 3
-!define VERSIONBUILD 2
+!define VERSIONBUILD 3
 !define HELPURL "http://github.com/heewoonkim2020/EasyUtil"
 !define UPDATEURL "http://github.com/heewoonkim2020/EasyUtil"
 !define ABOUTURL "http://github.com/heewoonkim2020/EasyUtil"
@@ -68,7 +68,7 @@
 UserInfo::GetAccountType
 pop $0
 ${If} $0 != "admin" ;Require admin rights on NT4+
-        messageBox mb_iconstop "An error occurred. Please try again."
+        messageBox mb_iconstop "Security error. Click OK to reload."
         setErrorLevel 740 ;ERROR_ELEVATION_REQUIRED
         quit
 ${EndIf}
@@ -87,13 +87,15 @@ Section "-!Core Files" SecCore
 
   ;Store installation folder
   WriteRegStr HKCU "Software\EasyUtil" "" $INSTDIR
-  WriteRegDWORD HKCU "Software\EasyUtil" "AutoUpdate" 0
+  WriteRegDWORD HKCU "Software\EasyUtil" "AutoUpdate" 1
   WriteRegDWORD HKCU "Software\EasyUtil" "InstallerAutoUpdate" 1
 
   ;Create uninstaller
   WriteUninstaller $INSTDIR\uninstaller.exe
   createDirectory "$SMPROGRAMS\EasyUtil"
   createShortCut "$SMPROGRAMS\EasyUtil\EUtil Uninstall.lnk" "$INSTDIR\uninstaller.exe"
+
+  File "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\logo.ico"
 
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${COMPANYNAME} ${APPNAME}" "DisplayName" "EasyUtil"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${COMPANYNAME} ${APPNAME}" "UninstallString" "$INSTDIR\uninstaller.exe"
@@ -145,26 +147,43 @@ Section "-!Core Files" SecCore
 
 SectionEnd
 
-Section "Security" SecSecurity
+SectionGroup "Security" secgroupSecurity
 
-  createDirectory "$INSTDIR\Security"
-  SetOutPath "$INSTDIR\Security"
+  Section "Avast EPK Portable" SecSecurityEPK
 
-  File "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\Security\avast_portable_modules.epk"
+    createDirectory "$INSTDIR\Security"
+    SetOutPath "$INSTDIR\Security"
 
-SectionEnd
+    File "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\Security\avast_portable_modules.epk"
+
+  SectionEnd
+
+  Section "VA Modules" SecSecurityVA
+
+    createDirectory "$INSTDIR\Security\VA"
+    SetOutPath "$INSTDIR\Security\VA"
+
+    File "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\Security\va1.eva"
+
+  SectionEnd
+
+SectionGroupEnd
 
 ;--------------------------------
 ;Descriptions
 
   ;Language strings
   LangString DESC_SecCore ${LANG_ENGLISH} "The core files of EasyUtil. Installation won't take effect if unchecked."
-  LangString DESC_SecSecurity ${LANG_ENGLISH} "Files that prevents hackers from using an exploit."
+  LangString DESC_SecSecurityEPK ${LANG_ENGLISH} "Avast's portable EPK files."
+  LangString DESC_SecSecurityVA ${LANG_ENGLISH} "Enhanced Avast VA Modules. Recommended."
+  LangString DESC_SecSecurity ${LANG_ENGLISH} "Prevents exploits and protects your PC. Very recommended."
 
   ;Assign language strings to sections
   !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
     !insertmacro MUI_DESCRIPTION_TEXT ${SecCore} $(DESC_SecCore)
-    !insertmacro MUI_DESCRIPTION_TEXT ${SecSecurity} $(DESC_SecSecurity)
+    !insertmacro MUI_DESCRIPTION_TEXT ${SecSecurityEPK} $(DESC_SecSecurityEPK)
+    !insertmacro MUI_DESCRIPTION_TEXT ${SecSecurityVA} $(DESC_SecSecurityVA)
+    !insertmacro MUI_DESCRIPTION_TEXT ${secgroupSecurity} $(DESC_SecSecurity)
   !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 ;--------------------------------
@@ -193,12 +212,16 @@ Section "Uninstall"
   Delete "$INSTDIR\booltrue_false\*"
   Delete "$INSTDIR\bin\*"
   Delete "$INSTDIR\guitk\*"
+  Delete "$INSTDIR\Security\*"
+  Delete "$INSTDIR\Security\VA\*"
 
   RMDir "$INSTDIR\Fun"
   RMDir "$INSTDIR\temp"
   RMDir "$INSTDIR\booltrue_false"
   RMDir "$INSTDIR\bin"
   RMDir "$INSTDIR\guitk"
+  RMDir "$INSTDIR\Security"
+  RMDir "$INSTDIR\Security\VA"
 
   RMDir "$INSTDIR"
 
