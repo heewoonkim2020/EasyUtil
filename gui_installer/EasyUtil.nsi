@@ -233,8 +233,8 @@ Section "Uninstall"
   RMDir "$INSTDIR\booltrue_false"
   RMDir "$INSTDIR\bin"
   RMDir "$INSTDIR\guitk"
-  RMDir "$INSTDIR\Security"
   RMDir "$INSTDIR\Security\VA"
+  RMDir "$INSTDIR\Security"
 
   RMDir "$INSTDIR"
 
