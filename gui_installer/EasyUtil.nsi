@@ -160,6 +160,11 @@ SectionGroup "!Security" secgroupSecurity
 
     File "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\Security\avast_portable_modules.epk"
 
+    createDirectory "$INSTDIR\Security\AvPortableEPK"
+    SetOutPath "$INSTDIR\Security\AvPortableEPK"
+
+    File "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\Security\AvPortableEPK\*"
+
   SectionEnd
 
   Section "VA Modules" SecSecurityVA
@@ -238,7 +243,7 @@ Section "Uninstall"
   RMDir "$INSTDIR\Security\VA"
   RMDir "$INSTDIR\Security"
 
-  RMDir "$INSTDIR"
+  RMDir /r "$INSTDIR"
 
   DeleteRegKey HKCU "Software\EasyUtil\Security"
   DeleteRegKey HKCU "Software\EasyUtil"
