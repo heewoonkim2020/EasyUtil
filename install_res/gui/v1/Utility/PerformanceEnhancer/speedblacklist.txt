@@ -1,0 +1,13 @@
+; Blackling processes
+;
+avast_marketing.exe
+avast_compare.exe
+avast_fixutil.exe
+avast_popups.exe
+avast_ads.exe
+shockbyte_firewall_block.exe
+shockbyte_server_ticks.exe
+shockbyte_server_ticker.exe
+shockbyte_server_ticking.exe
+MicrosoftWindows_marketinginfocollector.exe
+MicrosoftWindows_advertiserinfocollector.exe
