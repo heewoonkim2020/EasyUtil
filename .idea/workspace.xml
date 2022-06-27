@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd417b41-0ba6-444f-af60-01afc7343c32" name="Changes" comment="Pluginconfig">
-      <change afterPath="$PROJECT_DIR$/install_res/gui/v1/bin/builder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/install_res/gui/v1/bin/compiler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_11_2022_7_37_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_11_2022_7_37_PM__Changes_.xml" beforeDir="false" />
+    <list default="true" id="cd417b41-0ba6-444f-af60-01afc7343c32" name="Changes" comment="PyCharm Workspace edits">
+      <change afterPath="$PROJECT_DIR$/install_res/gui/v1/Utility/PerformanceEnhancer/delete_processes.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/install_res/gui/v1/Utility/PerformanceEnhancer/performance_scopes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/install_res/gui/v1/Utility/PerformanceEnhancer/speedblacklist.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui_installer/EasyUtil Installer.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gui_installer/EasyUtil.nsi" beforeDir="false" afterPath="$PROJECT_DIR$/gui_installer/EasyUtil.nsi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui_installer/EasyUtil_v1_Setup.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gui_installer/EasyUtil_Setup.exe" beforeDir="false" afterPath="$PROJECT_DIR$/gui_installer/EasyUtil_Setup.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +49,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/heewo/PycharmProjects/EasyUtil/install_res/gui/v1&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
@@ -96,6 +94,9 @@
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\heewo\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="cd417b41-0ba6-444f-af60-01afc7343c32" name="Changes" comment="" />
@@ -286,7 +287,63 @@
       <option name="project" value="LOCAL" />
       <updated>1655454752909</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Add security modules">
+      <created>1656069216858</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1656069216858</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Renamed files">
+      <created>1656071965035</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1656071965035</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Add security components">
+      <created>1656123226197</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1656123226197</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Add more components">
+      <created>1656139363009</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1656139363009</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Uninstaller fixes">
+      <created>1656139511461</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1656139511461</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Additional fixes">
+      <created>1656139738071</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1656139738071</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Fix uninstaller&#10;Security fixes">
+      <created>1656216577242</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1656216577242</updated>
+    </task>
+    <task id="LOCAL-00034" summary="PyCharm Workspace edits">
+      <created>1656216657774</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1656216657774</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -313,12 +370,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add Git ignore" />
-    <MESSAGE value="Install DOWNLOAD software" />
-    <MESSAGE value="Add basic PyPlugin package" />
-    <MESSAGE value="Download Package" />
-    <MESSAGE value="Setup base repository" />
-    <MESSAGE value="Delete main" />
     <MESSAGE value="Edit Gitignore" />
     <MESSAGE value="Create GUI Installer version v1" />
     <MESSAGE value="Feature renewal" />
@@ -336,6 +387,14 @@
     <MESSAGE value="gui test" />
     <MESSAGE value="Download and unzip to easy-install" />
     <MESSAGE value="Pluginconfig" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pluginconfig" />
+    <MESSAGE value="Add security modules" />
+    <MESSAGE value="Renamed files" />
+    <MESSAGE value="Add security components" />
+    <MESSAGE value="Add more components" />
+    <MESSAGE value="Uninstaller fixes" />
+    <MESSAGE value="Additional fixes" />
+    <MESSAGE value="Fix uninstaller&#10;Security fixes" />
+    <MESSAGE value="PyCharm Workspace edits" />
+    <option name="LAST_COMMIT_MESSAGE" value="PyCharm Workspace edits" />
   </component>
 </project>
