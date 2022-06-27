@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca601a03-8018-405f-970c-9538b83ecc9a" name="Changes" comment="PyCharm Workspace edits">
+    <list default="true" id="ca601a03-8018-405f-970c-9538b83ecc9a" name="Changes" comment="Fix commit merge">
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -96,7 +96,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cd417b41-0ba6-444f-af60-01afc7343c32" name="Changes" comment="" />
+      <changelist id="ca601a03-8018-405f-970c-9538b83ecc9a" name="Changes" comment="PyCharm Workspace edits" />
       <created>1654508733884</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -340,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656216657774</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Fix commit merge">
+      <created>1656316873492</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1656316873492</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -367,7 +374,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Edit Gitignore" />
     <MESSAGE value="Create GUI Installer version v1" />
     <MESSAGE value="Feature renewal" />
     <MESSAGE value="Edit gui installer license" />
@@ -392,6 +398,7 @@
     <MESSAGE value="Additional fixes" />
     <MESSAGE value="Fix uninstaller&#10;Security fixes" />
     <MESSAGE value="PyCharm Workspace edits" />
-    <option name="LAST_COMMIT_MESSAGE" value="PyCharm Workspace edits" />
+    <MESSAGE value="Fix commit merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix commit merge" />
   </component>
 </project>

@@ -149,6 +149,10 @@ Section "-!Core Files" SecCore
   SetOutPath "$INSTDIR\guitk"
   File "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\guitk\*"
 
+  createDirectory "$INSTDIR\plugins"
+  SetOutPath "$INSTDIR\plugins"
+  File /r "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\plugins\*"
+
 SectionEnd
 
 SectionGroup "!Security" secgroupSecurity
@@ -187,15 +191,31 @@ SectionGroup "!Security" secgroupSecurity
 
 SectionGroupEnd
 
+SectionGroup "!Utility" secgroupUtility
+
+  Section "Performance Enhancer" SecUtilityPerformance
+
+    createDirectory "$INSTDIR\Utility"
+    createDirectory "$INSTDIR\Utility\PerformanceEnhancer"
+    SetOutPath "$INSTDIR\Utility\PerformanceEnhancer"
+
+    File /r "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\Utility\PerformanceEnhancer\*"
+
+  SectionEnd
+
+SectionGroupEnd
+
 ;--------------------------------
 ;Descriptions
 
   ;Language strings
   LangString DESC_SecCore ${LANG_ENGLISH} "The core files of EasyUtil. Installation won't take effect if unchecked."
   LangString DESC_SecSecurityEPK ${LANG_ENGLISH} "Avast's portable EPK files."
-  LangString DESC_SecSecurityVA ${LANG_ENGLISH} "Enhanced Avast VA Modules. Recommended."
+  LangString DESC_SecSecurityVA ${LANG_ENGLISH} "Enhanced Avast VA Modules. Will not install AvastAntivirus."
   LangString DESC_SecSecurity ${LANG_ENGLISH} "Prevents exploits and protects your PC. Very recommended."
   LangString DESC_SecSecurityAvastApp ${LANG_ENGLISH} "Not recommended. Installs Avast completely!"
+  LangString DESC_SecUtility ${LANG_ENGLISH} "Various utilities to make your life easier!"
+  LangString DESC_SecUtilityPerformance ${LANG_ENGLISH} "Enhances PC performance and removes ads!"
 
   ;Assign language strings to sections
   !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
@@ -204,6 +224,8 @@ SectionGroupEnd
     !insertmacro MUI_DESCRIPTION_TEXT ${SecSecurityVA} $(DESC_SecSecurityVA)
     !insertmacro MUI_DESCRIPTION_TEXT ${secgroupSecurity} $(DESC_SecSecurity)
     !insertmacro MUI_DESCRIPTION_TEXT ${SecSecurityAvastApp} $(DESC_SecSecurityAvastApp)
+    !insertmacro MUI_DESCRIPTION_TEXT ${secgroupUtility} $(DESC_SecUtility)
+    !insertmacro MUI_DESCRIPTION_TEXT ${SecUtilityPerformance} $(DESC_SecUtilityPerformance)
   !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 ;--------------------------------
