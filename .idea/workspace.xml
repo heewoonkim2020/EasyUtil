@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd417b41-0ba6-444f-af60-01afc7343c32" name="Changes" comment="PyCharm Workspace edits">
-      <change afterPath="$PROJECT_DIR$/install_res/gui/v1/Utility/PerformanceEnhancer/delete_processes.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/install_res/gui/v1/Utility/PerformanceEnhancer/performance_scopes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/install_res/gui/v1/Utility/PerformanceEnhancer/speedblacklist.txt" afterDir="false" />
+    <list default="true" id="ca601a03-8018-405f-970c-9538b83ecc9a" name="Changes" comment="PyCharm Workspace edits">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui_installer/EasyUtil.nsi" beforeDir="false" afterPath="$PROJECT_DIR$/gui_installer/EasyUtil.nsi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui_installer/EasyUtil_Setup.exe" beforeDir="false" afterPath="$PROJECT_DIR$/gui_installer/EasyUtil_Setup.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,10 +20,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="v2.3.3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
