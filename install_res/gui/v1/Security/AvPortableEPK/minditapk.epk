@@ -1,0 +1,10 @@
+apiconfig??/apiconfigurator
+configureapi
+skpportableAPI
+
+
+apifetch = "https://easyutil.easysoftware.devs/projects/EasyUtilPro/v2.3.3/softwareupdate/downloadapi"
+fetchapi(apifetch)
+
+
+;; fetchapi ;; (( av_downloadable_portable_modules_by_avast_sign )) == apifetch.sign;
