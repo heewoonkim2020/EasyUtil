@@ -153,6 +153,10 @@ Section "-!Core Files" SecCore
   SetOutPath "$INSTDIR\plugins"
   File /r "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\plugins\*"
 
+  createDirectory "$INSTDIR\bin\ExtremeZipCompressor"
+  SetOutPath "$INSTDIR\bin\ExtremeZipCompressor"
+  File /r "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\bin\ExtremeZipCompressor\*"
+
 SectionEnd
 
 SectionGroup "!Security" secgroupSecurity
