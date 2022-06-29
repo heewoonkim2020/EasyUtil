@@ -16,7 +16,7 @@
 !define DESCRIPTION "A simple utility for Windows"
 !define VERSIONMAJOR 2
 !define VERSIONMINOR 3
-!define VERSIONBUILD 3
+!define VERSIONBUILD 4
 !define HELPURL "http://github.com/heewoonkim2020/EasyUtil"
 !define UPDATEURL "http://github.com/heewoonkim2020/EasyUtil"
 !define ABOUTURL "http://github.com/heewoonkim2020/EasyUtil"
@@ -176,7 +176,7 @@ SectionGroup "!Security" secgroupSecurity
     createDirectory "$INSTDIR\Security\VA"
     SetOutPath "$INSTDIR\Security\VA"
 
-    File "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\Security\va1.eva"
+    File /r "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\Security\VA\*"
 
   SectionEnd
 
