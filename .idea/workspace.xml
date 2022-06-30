@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca601a03-8018-405f-970c-9538b83ecc9a" name="Changes" comment="Fix VA Modules">
-      <change afterPath="$PROJECT_DIR$/install_res/gui/v1/bin/ExtremeZipCompressor/chunk1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/install_res/gui/v1/bin/ExtremeZipCompressor/duper.py" afterDir="false" />
+    <list default="true" id="ca601a03-8018-405f-970c-9538b83ecc9a" name="Changes" comment="Add zip2lib">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui_installer/EasyUtil.nsi" beforeDir="false" afterPath="$PROJECT_DIR$/gui_installer/EasyUtil.nsi" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui_installer/EasyUtil_Setup.exe" beforeDir="false" afterPath="$PROJECT_DIR$/gui_installer/EasyUtil_Setup.exe" afterDir="false" />
@@ -373,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656483937958</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Add zip2lib">
+      <created>1656497095857</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1656497095857</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -403,7 +408,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/install_res/gui/v1" />
     </ignored-roots>
-    <MESSAGE value="Edit gui installer license" />
     <MESSAGE value="Safesearch plugin" />
     <MESSAGE value="Add suride plugin" />
     <MESSAGE value="Beta installer" />
@@ -428,6 +432,7 @@
     <MESSAGE value="Fix commit merge" />
     <MESSAGE value="Performance Enhancer" />
     <MESSAGE value="Fix VA Modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix VA Modules" />
+    <MESSAGE value="Add zip2lib" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add zip2lib" />
   </component>
 </project>
