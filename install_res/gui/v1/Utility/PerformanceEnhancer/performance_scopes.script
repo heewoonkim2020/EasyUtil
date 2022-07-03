@@ -1,0 +1,5 @@
+for all processes:
+    if the process name is in speedblacklist.txt file converted to DOS format:
+        kill the process:
+    end the if loop:
+end the for loop:

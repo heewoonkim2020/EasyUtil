@@ -16,7 +16,7 @@
 !define DESCRIPTION "A simple utility for Windows"
 !define VERSIONMAJOR 2
 !define VERSIONMINOR 3
-!define VERSIONBUILD 3
+!define VERSIONBUILD 4
 !define HELPURL "http://github.com/heewoonkim2020/EasyUtil"
 !define UPDATEURL "http://github.com/heewoonkim2020/EasyUtil"
 !define ABOUTURL "http://github.com/heewoonkim2020/EasyUtil"
@@ -36,6 +36,8 @@
   ;Request application privileges for Windows Vista
   RequestExecutionLevel admin
 
+  Var InstOptionsDialog
+
 ;--------------------------------
 ;Interface Settings
 
@@ -47,6 +49,7 @@
   !insertmacro MUI_PAGE_WELCOME
   !insertmacro MUI_PAGE_LICENSE "C:\Users\heewo\PycharmProjects\EasyUtil\gui_installer\license.txt"
   !insertmacro MUI_PAGE_COMPONENTS
+  Page custom optionsPageCreate optionsPageLeave
   !insertmacro MUI_PAGE_DIRECTORY
   !insertmacro MUI_PAGE_INSTFILES
   !insertmacro MUI_PAGE_FINISH
@@ -57,9 +60,31 @@
   !insertmacro MUI_UNPAGE_FINISH
 
 ;--------------------------------
-;Languages
+;Languages & Page Config
 
   !insertmacro MUI_LANGUAGE "English"
+
+  Function optionsPageCreate
+    !insertmacro MUI_HEADER_TEXT "Installation Options" "Advanced options for installation."
+
+    nsDialogs::Create 1018
+    Pop $InstOptionsDialog
+
+    ${If} $InstOptionsDialog == error
+      Abort
+    ${EndIf}
+
+    ${NSD_CreateGroupBox} 10% 10u 80% 62u "Beta"
+    Pop $0
+
+      ${NSD_CreateCheckbox} 14% 21u 30% 14u "Fast Install"
+
+    nsDialogs::Show
+  FunctionEnd
+
+  Function optionsPageLeave
+    Sleep 1
+  FunctionEnd
 
 ;--------------------------------
 ;Installer Sections
@@ -106,7 +131,7 @@ Section "-!Core Files" SecCore
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${COMPANYNAME} ${APPNAME}" "InstallLocation" $\"$INSTDIR$\"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${COMPANYNAME} ${APPNAME}" "DisplayIcon" "$\"$INSTDIR\logo.ico$\""
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${COMPANYNAME} ${APPNAME}" "Publisher" "${COMPANYNAME}"
-  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${COMPANYNAME} ${APPNAME}" "HelpLink" "'${HELPURL}$\'"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${COMPANYNAME} ${APPNAME}" "HelpLink" "${HELPURL}"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${COMPANYNAME} ${APPNAME}" "URLUpdateInfo" "${UPDATEURL}"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${COMPANYNAME} ${APPNAME}" "URLInfoAbout" "${ABOUTURL}"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${COMPANYNAME} ${APPNAME}" "DisplayVersion" "${VERSIONMAJOR}.${VERSIONMINOR}.${VERSIONBUILD}"
@@ -153,6 +178,10 @@ Section "-!Core Files" SecCore
   SetOutPath "$INSTDIR\plugins"
   File /r "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\plugins\*"
 
+  createDirectory "$INSTDIR\bin\ExtremeZipCompressor"
+  SetOutPath "$INSTDIR\bin\ExtremeZipCompressor"
+  File /r "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\bin\ExtremeZipCompressor\*"
+
 SectionEnd
 
 SectionGroup "!Security" secgroupSecurity
@@ -176,7 +205,7 @@ SectionGroup "!Security" secgroupSecurity
     createDirectory "$INSTDIR\Security\VA"
     SetOutPath "$INSTDIR\Security\VA"
 
-    File "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\Security\va1.eva"
+    File /r "C:\Users\heewo\PycharmProjects\EasyUtil\install_res\gui\v1\Security\VA\*"
 
   SectionEnd
 
