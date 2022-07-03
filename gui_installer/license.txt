@@ -1,8 +1,8 @@
 (c) Copyright 2022 EasyUtil, Inc.
 
-DEVFRIENDS LICENSE >_<
+MIT License.
 ---------------------------------------
-- BASIC FAQ
+- Terms
 
 This GUI-based installer is recommended for most people since it does not use a CLI (command line interface).
 This installer is much easier to use.
@@ -41,10 +41,9 @@ You're totally being scammed.
 
 EasyUtil has terms you are required to follow in order to use the service.
 
-1. DEVFRIENDS LICENSE >_<
-License version: DevFriends License V3
+1. License Information
 
-DEVFRIENDS LICENSE V3
+MIT License 2022
 
 Copyright (c) 2022 heewoonkim2020
 

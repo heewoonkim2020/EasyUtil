@@ -36,6 +36,8 @@
   ;Request application privileges for Windows Vista
   RequestExecutionLevel admin
 
+  Var InstOptionsDialog
+
 ;--------------------------------
 ;Interface Settings
 
@@ -47,6 +49,7 @@
   !insertmacro MUI_PAGE_WELCOME
   !insertmacro MUI_PAGE_LICENSE "C:\Users\heewo\PycharmProjects\EasyUtil\gui_installer\license.txt"
   !insertmacro MUI_PAGE_COMPONENTS
+  Page custom optionsPageCreate optionsPageLeave
   !insertmacro MUI_PAGE_DIRECTORY
   !insertmacro MUI_PAGE_INSTFILES
   !insertmacro MUI_PAGE_FINISH
@@ -57,9 +60,31 @@
   !insertmacro MUI_UNPAGE_FINISH
 
 ;--------------------------------
-;Languages
+;Languages & Page Config
 
   !insertmacro MUI_LANGUAGE "English"
+
+  Function optionsPageCreate
+    !insertmacro MUI_HEADER_TEXT "Installation Options" "Advanced options for installation."
+
+    nsDialogs::Create 1018
+    Pop $InstOptionsDialog
+
+    ${If} $InstOptionsDialog == error
+      Abort
+    ${EndIf}
+
+    ${NSD_CreateGroupBox} 10% 10u 80% 62u "Beta"
+    Pop $0
+
+      ${NSD_CreateCheckbox} 14% 21u 30% 14u "Fast Install"
+
+    nsDialogs::Show
+  FunctionEnd
+
+  Function optionsPageLeave
+    Sleep 1
+  FunctionEnd
 
 ;--------------------------------
 ;Installer Sections
